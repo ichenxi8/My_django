@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>模板语法的学习</h1>
+    <div>{{ n1 }}</div>
+    <div>{{ n2 }}</div>
+<!--    通过索引获取列表中的值-->
+    <div>{{ n2.0 }}</div>
+    <div>{{ n2.1 }}</div>
+    <div>{{ n2.2 }}</div>
+    
+<!--    通过循环取值,列表-->
+    <div>
+        {% for item in n2 %}
+            <span>{{item}}</span>
+        {% endfor %}
+        
+    </div>
+    <hr/>
+<!--    获取所有键-->
+    {% for item in n3.keys %}
+        <li>{{item}}</li>
+    {% endfor %}
+<!--    获取所有值-->
+    {% for item in n3.values %}
+        <li>{{item}}</li>
+    {% endfor %}
+<!--    获取所有键值对-->
+    {% for k,v in n3.items %}
+        <li>{{k}} = {{v}}</li>
+    {% endfor %}
+
+    {% comment %} 获取列表中字典的值 {% endcomment %}
+    {{n4.1}}
+    {{n4.1.name}}
+    {{n4.1.role}}
+    {% comment %} 循环写法 {% endcomment %}
+    {% for item in n4%}
+        <div>{{ item.name }} {{ item.sllary }}</div>
+    {% endfor %}
+
+    <hr/>
+
+
+</body>
+</html>

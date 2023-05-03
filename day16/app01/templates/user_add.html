@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div>
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">新建用户</h3>
+            </div>
+            <div class="panel-body">
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">用户信息</label>
+                        <input type="text" class="form-control"  placeholder="用户信息" name="title" />
+                    </div>
+                  <button type="submit" class="btn btn-primary">提 交</button>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
